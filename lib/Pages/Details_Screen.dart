@@ -21,8 +21,6 @@ Widget build(BuildContext context) {
                   Positioned(
                     bottom: 24,
                     child: Container(
-                        padding: EdgeInsets.all(4),
-                        // ignore: sort_child_properties_last
                         child: Text("8",
                             style: TextStyle(
                                 fontSize: 18,
@@ -58,6 +56,7 @@ Widget build(BuildContext context) {
           Row(
             children: [
               Container(
+                padding: EdgeInsets.all(4),
                 child: Text(
                   "New",
                   style: TextStyle(fontSize: 12),
@@ -65,6 +64,54 @@ Widget build(BuildContext context) {
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 255, 129, 129),
                     borderRadius: BorderRadius.circular(4)),
+              ),
+              Row(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Icon(
+                    Icons.star,
+                    size: 26,
+                    color: Color.fromARGB(255, 255, 191, 0),
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 26,
+                    color: Color.fromARGB(255, 255, 191, 0),
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 26,
+                    color: Color.fromARGB(255, 255, 191, 0),
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 26,
+                    color: Color.fromARGB(255, 255, 191, 0),
+                  ),
+                  Icon(
+                    Icons.star,
+                    size: 26,
+                    color: Color.fromARGB(255, 255, 191, 0),
+                  ),
+                ],
+              ),
+              Row(
+                // ignore: prefer_const_literals_to_create_immutables
+                children: [
+                  Icon(
+                    Icons.edit_location,
+                    size: 26,
+                    color: Color.fromARGB(168, 3, 65, 27),
+                    // color: Color.fromARGB(255, 186, 30, 30),
+                  ),
+                  SizedBox(
+                    width: 3,
+                  ),
+                  Text(
+                    "Flower Shop",
+                    style: TextStyle(fontSize: 19),
+                  ),
+                ],
               )
             ],
           )
