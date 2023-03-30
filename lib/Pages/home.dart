@@ -19,9 +19,19 @@ class Home extends StatelessWidget {
                 mainAxisSpacing: 33),
             itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
-              return  GridTile(child: 
-              
-            );
+          return GridTile(
+                child: Stack(
+                  children: [
+                    Positioned(
+                      right: 0,
+                      left: 0,
+                      child: ClipRRect(
+                          borderRadius: BorderRadius.circular(55),
+                          child: Image.asset("assets/img/1.webp")),
+                    ),
+                  ],
+                ),
+              );
             }),
           drawer: Drawer(
             // ignore: prefer_const_literals_to_create_immutables
