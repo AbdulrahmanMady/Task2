@@ -1,10 +1,9 @@
 // ignore_for_file: prefer_const_constructors
 
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../Shared/Custom_Textfiled.dart';
+
+import '../Shared/Constans.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -12,32 +11,40 @@ class Login extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            // ignore: prefer_const_literals_to_create_immutables
-            children: [
-              const SizedBox(
-                height: 64,
-              ),
-              MyTextFiled(
-                textInputTypee: TextInputType.emailAddress ,
-                isPassword:false ,
-                hinttext: "Enter ur emial",
-              ),
-              const SizedBox(
-                height: 33,
-              ),
-              MyTextFiled(
-                textInputTypee:TextInputType.text ,
-                isPassword: true,
-                hinttext: "Enter Ur Password",
-              ),
-            ],
+        body: Center(
+      child: Column(
+        children: [
+          const SizedBox(
+            height: 200,
           ),
-        ),
+          TextField(
+              keyboardType: TextInputType.emailAddress,
+              obscureText: false,
+              decoration: widget_text_felid.copyWith(
+                hintText: "Enter your email",
+              )),
+          const SizedBox(height: 30),
+          TextField(
+              keyboardType: TextInputType.text,
+              obscureText: true,
+              decoration: widget_text_felid.copyWith(
+                hintText: "Enter your password",
+              )),
+          ElevatedButton(
+            onPressed: () {},
+            style: ButtonStyle(
+              backgroundColor: MaterialStateProperty.all(Colors.orange),
+              padding: MaterialStateProperty.all(EdgeInsets.all(12)),
+              shape: MaterialStateProperty.all(RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(8))),
+            ),
+            child: Text(
+              "click here",
+              style: TextStyle(fontSize: 19),
+            ),
+          ),
+        ],
       ),
-    );
+    ));
   }
 }
