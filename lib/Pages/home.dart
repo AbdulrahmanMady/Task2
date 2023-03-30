@@ -22,9 +22,11 @@ class Home extends StatelessWidget {
           return GridTile(
                 child: Stack(
                   children: [
-                    Positioned(
+                   Positioned(
                       right: 0,
                       left: 0,
+                      top: -3,
+                      bottom: -9,
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(55),
                           child: Image.asset("assets/img/1.webp")),
