@@ -58,7 +58,10 @@ Widget build(BuildContext context) {
           Row(
             children: [
               Container(
-                child: Text("New"),
+                child: Text(
+                  "New",
+                  style: TextStyle(fontSize: 12),
+                ),
                 decoration: BoxDecoration(
                     color: Color.fromARGB(255, 255, 129, 129),
                     borderRadius: BorderRadius.circular(4)),
