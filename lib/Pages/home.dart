@@ -40,6 +40,11 @@ class Home extends StatelessWidget {
                 title: Text("Logout"),
                 leading: Icon(Icons.exit_to_app),
                 onTap: () {}),
+                  Container(
+                  margin: EdgeInsets.only(bottom: 12),
+                  child: Text("Developed by abdo mady © 2023",
+                      style: TextStyle(fontSize: 16)),
+                )
         
           ]),
         ),
