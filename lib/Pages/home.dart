@@ -13,10 +13,19 @@ class Home extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
           drawer: Drawer(
+            // ignore: prefer_const_literals_to_create_immutables
             child: Column(children: [
               UserAccountsDrawerHeader(
-                accountEmail: Text("Abdo mady@gmail.com"),
-                accountName: Text("Abdo mady"),
+                decoration: BoxDecoration(
+                    image: DecorationImage(
+                        image: AssetImage("assets\img\Avatar-No-Background.png"),
+                        fit: BoxFit.cover)),
+                currentAccountPicture: CircleAvatar(
+                    radius: 55,
+                    backgroundImage:
+                        AssetImage("assets\img\0.jpg")),
+                accountEmail: Text("AbdoMady@gmail.com"),
+                accountName: Text("Abdo Mady"),
               )
             ]),
           ),
@@ -29,6 +38,7 @@ class Home extends StatelessWidget {
                       Positioned(
                         bottom: 24,
                         child: Container(
+                            // ignore: sort_child_properties_last
                             child: Text("8",
                                 style: TextStyle(
                                     fontSize: 18,
