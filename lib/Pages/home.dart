@@ -21,19 +21,21 @@ class Home extends StatelessWidget {
                   mainAxisSpacing: 33),
               itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
-                return GridTile(
-                  child: Stack(
-                    children: [
-                      Positioned(
-                        right: 0,
-                        left: 0,
-                        top: -3,
-                        bottom: -9,
-                        child: ClipRRect(
-                            borderRadius: BorderRadius.circular(55),
-                            child: Image.asset("assets/img/1.webp")),
-                      ),
-                    ],
+                 return GestureDetector(
+                  child: GridTile(
+                    child: Stack(
+                      children: [
+                        Positioned(
+                          right: 0,
+                          left: 0,
+                          top: -3,
+                          bottom: -9,
+                          child: ClipRRect(
+                              borderRadius: BorderRadius.circular(55),
+                              child: Image.asset("assets/img/1.webp")),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               }),
