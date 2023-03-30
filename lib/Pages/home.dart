@@ -11,30 +11,33 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                childAspectRatio: 3 / 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 33),
-            itemCount: 4,
-            itemBuilder: (BuildContext context, int index) {
-          return GridTile(
-                child: Stack(
-                  children: [
-                   Positioned(
-                      right: 0,
-                      left: 0,
-                      top: -3,
-                      bottom: -9,
-                      child: ClipRRect(
-                          borderRadius: BorderRadius.circular(55),
-                          child: Image.asset("assets/img/1.webp")),
-                    ),
-                  ],
-                ),
-              );
-            }),
+         body: Padding(
+          padding: const EdgeInsets.only(top: 22),
+          child: GridView.builder(
+              gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  childAspectRatio: 3 / 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 33),
+              itemCount: 4,
+              itemBuilder: (BuildContext context, int index) {
+                return GridTile(
+                  child: Stack(
+                    children: [
+                      Positioned(
+                        right: 0,
+                        left: 0,
+                        top: -3,
+                        bottom: -9,
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(55),
+                            child: Image.asset("assets/img/1.webp")),
+                      ),
+                    ],
+                  ),
+                );
+              }),
+        ),
           drawer: Drawer(
             // ignore: prefer_const_literals_to_create_immutables
             child: Column(children: [
