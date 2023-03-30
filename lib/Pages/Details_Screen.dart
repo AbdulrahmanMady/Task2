@@ -59,7 +59,7 @@ class _DetailsState extends State<Details> {
               height: 11,
             ),
             Text(
-              "\$ 12.99 ",
+              "\$ {widget.product.price} ",
               style: TextStyle(fontSize: 20),
             ),
             Row(
