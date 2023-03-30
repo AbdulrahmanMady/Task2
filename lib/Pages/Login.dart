@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import '../Shared/Constans.dart';
 import '../Shared/colors.dart';
+import 'Register.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -14,7 +15,7 @@ class Login extends StatelessWidget {
       child: Scaffold(
           body: Center(
         child: Padding(
-          padding: const EdgeInsets.all(33.0),
+          padding: const EdgeInsets.all(.0),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
@@ -55,7 +56,12 @@ class Login extends StatelessWidget {
                   const Text("Do not have an account ?",
                       style: TextStyle(fontSize: 20)),
                   TextButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const Register()));
+                      },
                       child: const Text(
                         "ٍٍSign Up",
                         style: TextStyle(color: Colors.black),

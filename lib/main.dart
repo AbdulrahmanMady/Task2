@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:tsk2/Pages/Login.dart';
 
@@ -11,8 +13,8 @@ class MyApp extends StatelessWidget {
  
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Register(),
+     return MaterialApp(debugShowCheckedModeBanner: false,
+      home: Register()
     );
   }
 }
