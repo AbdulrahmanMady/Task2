@@ -27,9 +27,13 @@ class Home extends StatelessWidget {
                 accountName: Text("Abdo Mady"),
               ),
               ListTile(
-                  title: Text("Home"), leading: Icon(Icons.home), onTap: () {})
-            ]),
-          ),
+                title: Text("Home"), leading: Icon(Icons.home), onTap: () {}),
+            ListTile(
+                title: Text("My products"),
+                leading: Icon(Icons.add_shopping_cart),
+                onTap: () {}),
+          ]),
+        ),
           appBar: AppBar(
             actions: [
               Row(
