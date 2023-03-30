@@ -76,6 +76,7 @@ class _DetailsState extends State<Details> {
                       borderRadius: BorderRadius.circular(4)),
                 ),
                 Row(
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Icon(
                       Icons.star,
@@ -105,6 +106,7 @@ class _DetailsState extends State<Details> {
                   ],
                 ),
                 Row(
+                  // ignore: prefer_const_literals_to_create_immutables
                   children: [
                     Icon(
                       Icons.edit_location,
@@ -112,9 +114,9 @@ class _DetailsState extends State<Details> {
                       color: Color.fromARGB(168, 3, 65, 27),
                       // color: Color.fromARGB(255, 186, 30, 30),
                     ),
-                    SizedBox(
-                      width: 3,
-                    ),
+                     SizedBox(
+            height: 16,
+          ),
                     Text(
                       "Flower Shop",
                       style: TextStyle(fontSize: 19),
