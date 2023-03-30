@@ -21,6 +21,8 @@ Widget build(BuildContext context) {
                   Positioned(
                     bottom: 24,
                     child: Container(
+                        padding: EdgeInsets.all(4),
+                        // ignore: sort_child_properties_last
                         child: Text("8",
                             style: TextStyle(
                                 fontSize: 18,
