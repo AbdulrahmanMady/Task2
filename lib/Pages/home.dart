@@ -10,21 +10,41 @@ class Home extends StatelessWidget {
 
   @override
    Widget build(BuildContext context) {
-    return Scaffold(
-        appBar: AppBar(
-      actions: [
-        Row(
-          // ignore: prefer_const_literals_to_create_immutables
-          children: [
-            Text("\$13", style: TextStyle(fontSize: 18)),
-            Text("\$13"),
-            IconButton(onPressed: () {}, icon: Icon(Icons.add_shopping_cart))
-
-          ],
-        ),
-      ],
-      backgroundColor: appbarGreen,
-      title: Text("Home"),
-    ));
+    return SafeArea(
+      child: Scaffold(
+          drawer: Drawer(),
+          appBar: AppBar(
+            actions: [
+              Row(
+                children: [
+                  Stack(
+                    children: [
+                      Positioned(
+                        bottom: 24,
+                        child: Container(
+                            child: Text("8",
+                                style: TextStyle(
+                                    fontSize: 18,
+                                    color: Color.fromARGB(255, 0, 0, 0))),
+                            decoration: BoxDecoration(
+                                color: Color.fromARGB(211, 164, 255, 193),
+                                shape: BoxShape.circle)),
+                      ),
+                      IconButton(
+                          onPressed: () {},
+                          icon: Icon(Icons.add_shopping_cart)),
+                    ],
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.only(right: 12),
+                    child: Text("\$13", style: TextStyle(fontSize: 18)),
+                  ),
+                ],
+              ),
+            ],
+            backgroundColor: appbarGreen,
+            title: Text("Home"),
+          )),
+    );
   }
 }
