@@ -5,8 +5,11 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
 import '../Shared/colors.dart';
+import 'home.dart';
 
 class Details extends StatefulWidget {
+  Item product;
+  Details({required this.product});
   @override
   State<Details> createState() => _DetailsState();
 }
@@ -51,7 +54,7 @@ class _DetailsState extends State<Details> {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.asset("assets/img/1.webp"),
+            Image.asset(widget.product.imgPath),
             SizedBox(
               height: 11,
             ),
