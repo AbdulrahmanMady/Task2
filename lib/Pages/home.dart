@@ -7,7 +7,6 @@ import '../Shared/colors.dart';
 
 class Home extends StatelessWidget {
   const Home({super.key});
-
   @override
    Widget build(BuildContext context) {
     return SafeArea(
@@ -18,7 +17,7 @@ class Home extends StatelessWidget {
               UserAccountsDrawerHeader(
                 decoration: BoxDecoration(
                     image: DecorationImage(
-                        image: AssetImage("assets\img\Avatar-No-Background.png"),
+                        image: AssetImage("assets/img/Avatar-No-Background.png"),
                         fit: BoxFit.cover)),
                 currentAccountPicture: CircleAvatar(
                     radius: 55,
