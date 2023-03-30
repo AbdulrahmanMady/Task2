@@ -7,11 +7,15 @@ class Home extends StatelessWidget {
   const Home({super.key});
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-        backgroundColor: appbarGreen,
-
+      actions: [
+        Row(
+          children: [Text("\$13"), Text("\$13")],
+        ),
+      ],
+      backgroundColor: appbarGreen,
       title: const Text("Home"),
     ));
   }
