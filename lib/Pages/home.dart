@@ -1,6 +1,7 @@
 
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names, empty_constructor_bodies
 
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
 import '../Shared/colors.dart';
@@ -47,7 +48,7 @@ class Home extends StatelessWidget {
                         builder: (context) => Details(product: items[index]),
                       ),
                     );
-                  },,
+                  },
                   child: GridTile(
                       // ignore: sort_child_properties_last
                       child: Stack(
@@ -151,4 +152,6 @@ class Home extends StatelessWidget {
       ),
     );
   }
+
+  
 }
