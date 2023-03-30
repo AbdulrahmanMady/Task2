@@ -10,62 +10,31 @@ class Register extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-          body: Center(
-        child: Padding(
-          padding: const EdgeInsets.all(33.0),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              const SizedBox(
-                height: 70,
-              ),
-              TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  obscureText: false,
-                  decoration: widget_text_felid.copyWith(
-                    hintText: "Enter your email",
-                  )),
-              const SizedBox(height: 30),
-              TextField(
-                  keyboardType: TextInputType.text,
-                  obscureText: true,
-                  decoration: widget_text_felid.copyWith(
-                    hintText: "Enter your password",
-                  )),
-              const SizedBox(height: 30),
-              ElevatedButton(
-                onPressed: () {},
-                style: ButtonStyle(
-                  backgroundColor: MaterialStateProperty.all(BTNgreen),
-                  padding: MaterialStateProperty.all(const EdgeInsets.all(12)),
-                  shape: MaterialStateProperty.all(RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8))),
-                ),
-                child: const Text(
-                  "Sign in",
-                  style: TextStyle(fontSize: 19),
-                ),
-              ),
-              const SizedBox(height: 30),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  const Text("Do not have an account ?",
-                      style: TextStyle(fontSize: 20)),
-                  TextButton(
-                      onPressed: () {},
-                      child: const Text(
-                        "ٍٍSign Up",
-                        style: TextStyle(color: Colors.black),
-                      ))
-                ],
-              )
-            ],
-          ),
+    return Scaffold(
+        appBar: AppBar(
+      actions: [
+        Row(
+          children: [
+            Stack(
+              children: [
+                Container(
+                    child: Text("8"),
+                    decoration: BoxDecoration(
+                        color: Color.fromARGB(211, 164, 255, 193),
+                        shape: BoxShape.circle)),
+                IconButton(
+                    onPressed: () {}, icon: Icon(Icons.add_shopping_cart)),
+              ],
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 12),
+              child: Text("\$13", style: TextStyle(fontSize: 18)),
+            ),
+          ],
         ),
-      )),
-    );
+      ],
+      backgroundColor: appbarGreen,
+      title: Text("Home"),
+    ));
   }
 }
