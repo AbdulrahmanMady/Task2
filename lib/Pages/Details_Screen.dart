@@ -15,6 +15,7 @@ Widget build(BuildContext context) {
       appBar: AppBar(
         actions: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Stack(
                 children: [
