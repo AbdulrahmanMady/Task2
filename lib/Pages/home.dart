@@ -50,7 +50,8 @@ class Home extends StatelessWidget {
                             bottom: -9,
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(55),
-                                child: Image.asset("assets/img/1.webp")),
+                               child: Image.asset(items[index].imgPath)),
+
                           ),
                         ],
                       ),
