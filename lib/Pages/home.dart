@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 
+import '../Shared/colors.dart';
+
 class Home extends StatelessWidget {
   const Home({super.key});
 
@@ -8,6 +10,8 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
+        backgroundColor: appbarGreen,
+
       title: const Text("Home"),
     ));
   }
