@@ -25,7 +25,9 @@ class Home extends StatelessWidget {
                         AssetImage("assets\img\0.jpg")),
                 accountEmail: Text("AbdoMady@gmail.com"),
                 accountName: Text("Abdo Mady"),
-              )
+              ),
+              ListTile(
+                  title: Text("Home"), leading: Icon(Icons.home), onTap: () {})
             ]),
           ),
           appBar: AppBar(
