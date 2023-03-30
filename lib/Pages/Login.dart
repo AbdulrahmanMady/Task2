@@ -4,6 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
+import '../Shared/Custom_Textfiled.dart';
+
 class Login extends StatelessWidget {
   const Login({super.key});
 
@@ -14,28 +16,16 @@ class Login extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(8.0),
           child: Column(
+            // ignore: prefer_const_literals_to_create_immutables
             children: [
               const SizedBox(
                 height: 64,
               ),
-              TextField(
-                  keyboardType: TextInputType.emailAddress,
-                  obscureText: false,
-                  decoration: InputDecoration(
-                    hintText: "Enter Your Email : ",
-                    // To delete borders
-                    enabledBorder: OutlineInputBorder(
-                      borderSide: Divider.createBorderSide(context),
-                    ),
-                    focusedBorder: OutlineInputBorder(
-                      borderSide: BorderSide(
-                        color: Colors.grey,
-                      ),
-                    ),
-                    // fillColor: Colors.red,
-                    filled: true,
-                    contentPadding: const EdgeInsets.all(8),
-                  ))
+              MyTextFiled(),
+              const SizedBox(
+                height: 33,
+              ),
+              MyTextFiled(),
             ],
           ),
         ),
