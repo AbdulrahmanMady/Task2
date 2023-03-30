@@ -10,12 +10,11 @@ class Details extends StatelessWidget {
   const Details({super.key});
 
   @override
-Widget build(BuildContext context) {
+  Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Stack(
                 children: [
@@ -55,6 +54,7 @@ Widget build(BuildContext context) {
             style: TextStyle(fontSize: 20),
           ),
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
               Container(
                 padding: EdgeInsets.all(4),
@@ -67,7 +67,6 @@ Widget build(BuildContext context) {
                     borderRadius: BorderRadius.circular(4)),
               ),
               Row(
-                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Icon(
                     Icons.star,
@@ -97,7 +96,6 @@ Widget build(BuildContext context) {
                 ],
               ),
               Row(
-                // ignore: prefer_const_literals_to_create_immutables
                 children: [
                   Icon(
                     Icons.edit_location,
@@ -115,7 +113,21 @@ Widget build(BuildContext context) {
                 ],
               )
             ],
-          )
+          ),
+          SizedBox(
+            height: 16,
+          ),
+          SizedBox(
+            width: double.infinity,
+            child: Text(
+              "Details : ",
+              style: TextStyle(fontSize: 22),
+              textAlign: TextAlign.start,
+            ),
+          ),
+          SizedBox(
+            height: 16,
+          ),
         ],
       ),
     );
