@@ -1,9 +1,16 @@
 
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, non_constant_identifier_names, empty_constructor_bodies
 
 import 'package:flutter/material.dart';
 
 import '../Shared/colors.dart';
+class Item {
+  String ImgPath;
+   double price;
+
+   Item({required this.ImgPath,required this.price})
+
+}
 
 class Home extends StatelessWidget {
   const Home({super.key});
