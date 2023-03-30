@@ -19,7 +19,11 @@ class Home extends StatelessWidget {
                 mainAxisSpacing: 33),
             itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
-              return Container();
+              return Container(
+                color: Colors.grey,
+
+              );
+
             }),
           drawer: Drawer(
             // ignore: prefer_const_literals_to_create_immutables
