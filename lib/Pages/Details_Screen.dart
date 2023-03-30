@@ -29,6 +29,7 @@ class _DetailsState extends State<Details> {
                   Positioned(
                     bottom: 24,
                     child: Container(
+                        // ignore: sort_child_properties_last
                         child: Text("8",
                             style: TextStyle(
                                 fontSize: 18,
@@ -67,6 +68,7 @@ class _DetailsState extends State<Details> {
               children: [
                 Container(
                   padding: EdgeInsets.all(4),
+                  // ignore: sort_child_properties_last
                   child: Text(
                     "New",
                     style: TextStyle(fontSize: 12),
@@ -112,7 +114,6 @@ class _DetailsState extends State<Details> {
                       Icons.edit_location,
                       size: 26,
                       color: Color.fromARGB(168, 3, 65, 27),
-                      // color: Color.fromARGB(255, 186, 30, 30),
                     ),
                      SizedBox(
             height: 16,
