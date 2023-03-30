@@ -4,6 +4,7 @@
 import 'package:flutter/material.dart';
 
 import '../Shared/colors.dart';
+import 'Details_Screen.dart';
 class Item {
   String imgPath;
   double price;
@@ -23,6 +24,7 @@ class Home extends StatelessWidget {
     Item(price: 12.99, imgPath: "assets/img/7.webp"),
     Item(price: 12.99, imgPath: "assets/img/8.webp"),
   ];
+  
   @override
   Widget build(BuildContext context) {
      return SafeArea(
@@ -38,7 +40,14 @@ class Home extends StatelessWidget {
               itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
                 return GestureDetector(
-                  onTap: () {},
+                 onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => Details(product: items[index]),
+                      ),
+                    );
+                  },,
                   child: GridTile(
                       // ignore: sort_child_properties_last
                       child: Stack(
