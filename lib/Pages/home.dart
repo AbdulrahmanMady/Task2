@@ -9,9 +9,11 @@ import 'Details_Screen.dart';
 class Item {
   String imgPath;
   double price;
+  String location;
 
-  Item({required this.imgPath, required this.price});
 
+  
+  Item({required this.imgPath, required this.price, this.location = "abdo"});
 }
 
 class Home extends StatelessWidget {
