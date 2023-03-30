@@ -10,7 +10,7 @@ class Details extends StatelessWidget {
   const Details({super.key});
 
   @override
- Widget build(BuildContext context) {
+Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         actions: [
@@ -21,7 +21,6 @@ class Details extends StatelessWidget {
                   Positioned(
                     bottom: 24,
                     child: Container(
-                        // ignore: sort_child_properties_last
                         child: Text("8",
                             style: TextStyle(
                                 fontSize: 18,
@@ -47,7 +46,16 @@ class Details extends StatelessWidget {
       body: Column(
         children: [
           Image.asset("assets/img/1.webp"),
-          Text("\$ 12.99 "),
+          SizedBox(height: 11,),
+          Text("\$ 12.99 ",style: TextStyle(fontSize: ),)
+            ,Row(
+            children: [
+              Container(
+                child: Text("New"),
+              )
+            ],
+
+            )
         ],
       ),
     );
