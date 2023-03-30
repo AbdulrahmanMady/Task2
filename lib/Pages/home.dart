@@ -9,9 +9,9 @@ class Home extends StatelessWidget {
   const Home({super.key});
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+     return SafeArea(
       child: Scaffold(
-         body: Padding(
+        body: Padding(
           padding: const EdgeInsets.only(top: 22),
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -21,22 +21,36 @@ class Home extends StatelessWidget {
                   mainAxisSpacing: 33),
               itemCount: 4,
               itemBuilder: (BuildContext context, int index) {
-                 return GestureDetector(
+                return GestureDetector(
+                  onTap: () {},
                   child: GridTile(
-                    child: Stack(
-                      children: [
-                        Positioned(
-                          right: 0,
-                          left: 0,
-                          top: -3,
-                          bottom: -9,
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(55),
-                              child: Image.asset("assets/img/1.webp")),
+                      // ignore: sort_child_properties_last
+                      child: Stack(
+                        children: [
+                          Positioned(
+                            right: 0,
+                            left: 0,
+                            top: -3,
+                            bottom: -9,
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(55),
+                                child: Image.asset("assets/img/1.webp")),
+                          ),
+                        ],
+                      ),
+                      footer: GridTileBar(
+// backgroundColor: Color.fromARGB(66, 73, 127, 110),
+                        trailing: IconButton(
+                            color: Color.fromARGB(255, 62, 94, 70),
+                            onPressed: () {},
+                            icon: Icon(Icons.add)),
+
+                        leading: Text("\$12.99"),
+
+                        title: Text(
+                          "",
                         ),
-                      ],
-                    ),
-                  ),
+                      )),
                 );
               }),
         ),
